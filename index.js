@@ -67,6 +67,8 @@ server()
         }
 
         getData()
+
+        console.log("gsad", result);
         
         res.send(result);
     })
