@@ -5,7 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha -R tests/**/*.test.js && codecov -t 09df5bad-9fb6-4150-88a8-bc77c492e22f"
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha -R tests/**/*.test.js && codecov -t 09df5bad-9fb6-4150-88a8-bc77c492e22f",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
