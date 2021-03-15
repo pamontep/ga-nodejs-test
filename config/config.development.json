@@ -1,0 +1,23 @@
+{
+    "api": {
+        "name": "nodejs-express-api-init API (Development)",
+        "protocol": "https",
+        "host": "127.0.0.1",
+        "port": 8443,
+        "cors": {
+            "origin": "https://localhost:8443",
+            "credentials": true
+        }
+    },
+    "database": {
+        "username": "root",
+        "password": "password",
+        "name": "test_development",
+        "database": "test_development",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "dialect": "mysql",
+        "engine": "InnoDB",
+        "charset": "utf8"
+    }
+}

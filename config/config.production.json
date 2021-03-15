@@ -1,0 +1,23 @@
+{
+    "api": {
+        "name": "nodejs-express-api-init API (Production)",
+        "protocol": "https",
+        "host": "127.0.0.1",
+        "port": 443,
+        "cors": {
+            "origin": "https://www.abcd.com",
+            "credentials": true
+        }
+    },
+    "database": {
+        "username": "strong_username",
+        "password": "strong_password",
+        "name": "test_prd",
+        "database": "test_prd",
+        "host": "0.0.0.0",
+        "port": 3306,
+        "dialect": "mysql",
+        "engine": "InnoDB",
+        "charset": "utf8"
+    }
+}
