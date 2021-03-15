@@ -14,7 +14,7 @@ const bodyParser = require('body-parser');
 // const status = require('../ga-nodejs-test/src/classes/Status');
 
 
-function getGA4Report() {
+async function getGA4Report() {
     const { google } = require('googleapis')
     const scopes = 'https://www.googleapis.com/auth/analytics.readonly'
     const email = "analytic-test@analytictest-28911.iam.gserviceaccount.com"
@@ -33,17 +33,16 @@ function getGA4Report() {
                 'end-date': 'today',
                 'metrics': 'ga:pageviews'
             })
-
-            res.send(result)
-
             console.dir(result)
+            
+            return result;
         }
         catch (err) {
             console.log(err);
         }
     }
 
-    getData()
+    return await getData()
 }
 
 
@@ -71,6 +70,7 @@ server()
         });*/
     })
     .get('/ga-report', function (req, res) {
-        getGA4Report()
+        const result = await getGA4Report();
+        res.send(result);
     })
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
