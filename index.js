@@ -45,28 +45,34 @@ server()
         const jwt = new google.auth.JWT(email, null, private_key, scopes)
         const view_id = '239286685'
 
-        const data = await getData(google, jwt, view_id)
-        res.json(data)
+        async function getData() {
+            try {
+                const response = await jwt.authorize()
+                console.log("auth response", response);
+                const result = await google.analytics('v3').data.ga.get({
+                    'auth': jwt,
+                    'ids': 'ga:' + view_id,
+                    'start-date': '30daysAgo',
+                    'end-date': 'today',
+                    'metrics': 'ga:pageviews'
+                })
+                console.dir(result)
+                
+                //return result;
+
+                res.json(result)
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
+        getData()
+
+        //const data = await getData(google, jwt, view_id)
+        //res.json(data)
         
     })
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
  
-    async function getData(google, jwt, view_id) {
-        try {
-            const response = await jwt.authorize()
-            console.log("auth response", response);
-            const result = await google.analytics('v3').data.ga.get({
-                'auth': jwt,
-                'ids': 'ga:' + view_id,
-                'start-date': '30daysAgo',
-                'end-date': 'today',
-                'metrics': 'ga:pageviews'
-            })
-            console.dir(result)
-            
-            return result;
-        }
-        catch (err) {
-            console.log(err);
-        }
-    }
+    
