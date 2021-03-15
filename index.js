@@ -8,7 +8,7 @@
 const moment = require('moment');
 const server = require('express');
 const path = require('path');
-const PORT = process.env.PORT || 9999;
+const PORT = process.env.PORT || 443;
 const request = require('request');
 const bodyParser = require('body-parser');
 const status = require('../nodejs-express-api-init/src/classes/Status');
