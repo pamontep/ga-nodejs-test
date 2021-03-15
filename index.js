@@ -11,7 +11,7 @@ const path = require('path');
 const PORT = process.env.PORT || 443;
 const request = require('request');
 const bodyParser = require('body-parser');
-const status = require('../ga-nodejs-test/src/classes/Status');
+// const status = require('../ga-nodejs-test/src/classes/Status');
 
 server()
     .use(bodyParser.json())
