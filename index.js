@@ -45,13 +45,13 @@ server()
         const jwt = new google.auth.JWT(email, null, private_key, scopes)
         const view_id = '239286685'
 
-        getData(google, jwt, view_id)
+        const data = await getData(google, jwt, view_id)
+        res.json(data)
         
     })
     .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
-
-    async function getData(google, jwt, viewid) {
+    async function getData(google, jwt, view_id) {
         try {
             const response = await jwt.authorize()
             console.log("auth response", response);
