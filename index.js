@@ -25,7 +25,7 @@ function getGA4Report() {
     async function getData() {
         try {
             const response = await jwt.authorize()
-            const result = await google.analytics('v4').data.ga.get({
+            const result = await google.analytics('v3').data.ga.get({
                 'auth': jwt,
                 'ids': 'ga:' + view_id,
                 'start-date': '30daysAgo',
