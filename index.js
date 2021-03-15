@@ -34,6 +34,8 @@ function getGA4Report() {
                 'metrics': 'ga:pageviews'
             })
 
+            res.send(result)
+
             console.dir(result)
         }
         catch (err) {
