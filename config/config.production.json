@@ -1,6 +1,6 @@
 {
     "api": {
-        "name": "nodejs-express-api-init API (Production)",
+        "name": "ga-nodejs-test API (Production)",
         "protocol": "https",
         "host": "127.0.0.1",
         "port": 443,

@@ -11,12 +11,12 @@ const path = require('path');
 const PORT = process.env.PORT || 443;
 const request = require('request');
 const bodyParser = require('body-parser');
-const status = require('../nodejs-express-api-init/src/classes/Status');
+const status = require('../ga-nodejs-test/src/classes/Status');
 
 server()
     .use(bodyParser.json())
     .use(bodyParser.urlencoded({ extended: false}))
-    .get('/', (req, res) => res.send(`Hi there! This is a nodejs-express-api-init running on PORT: ${ PORT }`))
+    .get('/', (req, res) => res.send(`Hi there! This is a ga-nodejs-test running on PORT: ${ PORT }`))
     .get('/ga-callback', function (req, res) {
         console.log(1234);
         /*status.getStatusFromFile().then(function (rs) {

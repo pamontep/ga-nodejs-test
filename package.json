@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-express-api-init",
+  "name": "ga-nodejs-test",
   "version": "1.0.0",
   "description": "A nodejs express api init for ready to development.",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pamontep/nodejs-express-api-init.git"
+    "url": "git+https://github.com/pamontep/ga-nodejs-test.git"
   },
   "author": "Pamontep Panya <pamontep.p@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pamontep/nodejs-express-api-init/issues"
+    "url": "https://github.com/pamontep/ga-nodejs-test/issues"
   },
-  "homepage": "https://github.com/pamontep/nodejs-express-api-init#readme",
+  "homepage": "https://github.com/pamontep/ga-nodejs-test#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
     "ejs": "^2.5.6",
