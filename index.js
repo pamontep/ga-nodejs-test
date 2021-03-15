@@ -57,6 +57,11 @@ server()
                 })
 
                 console.dir(result)
+
+                res.json({
+                    result: JSON.stringify(result),
+                    status: 200
+                });
             }
             catch (err) {
                 console.log(err);
