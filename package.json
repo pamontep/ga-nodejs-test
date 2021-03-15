@@ -23,6 +23,7 @@
     "ejs": "^2.5.6",
     "express": "^4.15.2",
     "google-auth-library": "^7.0.2",
+    "googleapis": "^67.1.1",
     "install": "^0.13.0",
     "moment": "^2.20.1",
     "npm": "^7.6.1",
