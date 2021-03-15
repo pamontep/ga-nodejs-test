@@ -65,6 +65,8 @@ server()
                 console.log(err);
             }
         }
+
+        getData()
         
         res.send(result);
     })
