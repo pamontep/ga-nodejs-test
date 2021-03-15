@@ -66,9 +66,9 @@ server()
             }
         }
 
-        getData()
-
-        console.log("gsad", result);
+        getData(function (data) {
+            console.log("data", data);
+        })
         
         res.send(result);
     })
